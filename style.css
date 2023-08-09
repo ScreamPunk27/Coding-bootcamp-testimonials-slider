@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+
+:root{
+    --darkBlue:hsl(240, 38%, 20%);
+    --grayishBlue:hsl(240, 18%, 77%);
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#slider{
+    font-family: 'Inter',sans-serif;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+.slider__img{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/pattern-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    
+}
+
+.slider__img__photo{
+    width: 100%;
+  
+}
+
+.slider__img__photo img{
+    width: 100%;
+    height: 250px;
+    display: block;
+    box-shadow: 0px 15px 30px -15px #111;
+}
+
+.slider__img__buttons{
+    position: absolute;
+    bottom: 15px;
+    display: inline;
+    padding: .5rem;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.slider__img__buttons img{
+    margin-left: .6rem;
+    margin-right: .6rem;
+    width: 10px;
+    cursor: pointer;
+}
+
+.slider__info{
+    margin-top: 3rem;
+    text-align: center;
+    background-image: url('/images/pattern-quotes.svg');
+    background-size:70px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+
+.slider__info__quote{
+    margin-bottom: 1rem;
+    padding: 1.8rem 2rem 0 2rem;
+}
+
+#slider-quote{
+    font-weight: 300;
+}
+
+.name,.job{
+    font-size:.9rem;
+}
+
+.name{
+    font-weight: 700;
+    color: var(--darkBlue);
+}
+
+.job{
+    color: var(--grayishBlue);
+}
+
+
+@media screen and (min-width:400px){
+    #slider{
+        width: calc(100vw - 10%);
+    }
+}
+
+@media screen and (min-width:500px){
+    #slider{
+        width: calc(100vw - 20%);
+    }
+}
+
+@media screen and (min-width:600px){
+    #slider{
+        width: calc(100vw - 30%);
+    }
+}
+
+@media screen and (min-width:700px){
+    #slider{
+        width: calc(100vw - 40%);
+    }
+}
+
+
+@media screen and (min-width:900px){
+    #slider{
+        width: calc(100vw - 50%);
+    }
+}
+
+@media screen and (min-width:1000px){
+    body{
+        height: 100vh;
+        justify-content: center;
+  
+    }
+
+    #slider{
+       position: relative;
+       display: flex;
+       flex-direction: row-reverse;
+       background-image: url('/images/pattern-curve.svg');
+       background-repeat: no-repeat;
+       background-position:left bottom;
+       width: 80%;
+    }
+
+    .slider__img,.slider__info{
+        width: 50%;
+    }
+    
+    .slider__img__photo img{
+        height: 450px;
+        width: auto;
+        display: block;
+    }
+
+    .slider__img__buttons{
+        position: absolute;
+        bottom: 15px;
+        left: 70px;
+    }
+
+    .slider__info{
+        position: absolute;
+        left: 13%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0;
+        text-align: left;
+        background-size:70px;
+        background-position: 15% 10%;
+       
+    }
+
+    .slider__info__quote{
+        margin-bottom: 1rem;
+        padding: 3rem 3rem 0 0;
+    }
+
+    #slider-quote{
+        font-size: 1.5rem;
+    }
+
+    .slider__info__person{
+        display: flex;
+    }
+
+    .name{
+        margin-right: 0.5rem;
+    }
+
+    .name,.job{
+        font-size:1rem;
+    }
+}
